@@ -1,0 +1,99 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Rijoan Rashid Mobile Banking</title>
+</head>
+<body class="bg-gray-100 p-4 sm:p-6">
+
+    <h2 class="text-center text-2xl font-bold text-blue-700 mb-4">Rijoan Rashid Mobile Banking</h2>
+
+    <div class="w-full sm:w-3/4 md:w-1/2 lg:w-1/3 mx-auto p-6 bg-white shadow-lg rounded-xl border border-gray-300 hover:shadow-2xl duration-300 grid gap-2">
+
+        <div class="flex justify-center gap-3 mb-4">
+            <button class="btn btn-primary px-4 w-1/2  hover:bg-blue-500 transition-all duration-300">
+                Assistant
+            </button>
+            <button class="btn sm:w-1/2 hover:bg-gray-200 transition-all duration-300">
+                Transaction History
+            </button>
+        </div>
+        
+        <!-- Income Section -->
+        <div class="form-control">
+            <label class="label font-semibold text-gray-600">Income</label>
+            <input type="number" class="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Your income" id="income">
+        </div>
+
+        <!-- Grid Adjustment: Stack inputs vertically on small screens -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="form-control">
+                <label class="label font-semibold text-gray-600">Software Cost</label>
+                <input type="number" class="input input-bordered w-full transition-all" placeholder="Software Cost" id="software">
+            </div>
+
+            <div class="form-control">
+                <label class="label font-semibold text-gray-600">Course Cost</label>
+                <input type="number" class="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Course Cost" id="course">
+            </div>
+
+            <div class="form-control">
+                <label class="label font-semibold text-gray-600">Internet Cost</label>
+                <input type="number" class="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all" placeholder="Internet Cost" id="internet">
+            </div>
+        </div>
+
+        <!-- Calculate Button -->
+        <button class="btn btn-primary w-full hover:bg-blue-600 transition-colors duration-300" id="calculateBtn">Calculate</button>
+
+        <!-- Savings Section -->
+        <div class="hidden" id="savingsDiv">
+            <label class="label font-semibold text-gray-600">Savings (%)</label>
+            <input type="number" class="input input-bordered w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all mb-3" placeholder="Savings %" id="savings">
+
+               <!-- Calculate Savings Button -->
+        <button class="btn btn-success w-full hover:bg-green-600 transition-colors duration-300" id="calculateSavings">Calculate Savings</button>
+        </div>
+
+     
+
+        <!-- Result Summary -->
+        <div class="hidden mt-8 bg-gray-50 p-1 rounded-lg shadow-lg" id="resultDiv">
+            <h2 class="text-center text-xl font-bold text-gray-700 mb-2">Result Summary</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 p-4 bg-white rounded-lg border border-gray-200 shadow-sm">
+
+                
+                    <div class="p-4 text-center bg-gray-100 rounded-lg">
+                        <p class="text-gray-500 text-sm font-semibold">Your Balance</p>
+                        <span class="text-lg font-bold text-gray-800" id="balance">0</span>$
+                    </div>
+                     
+                <div class="p-4 text-center bg-gray-100 rounded-lg">
+                    <p class="text-gray-500 font-semibold text-sm">Your Expense</p>
+                    <span class="text-lg font-bold text-gray-800" id="expense">0</span>$
+                </div>
+                
+                <div class="p-4 text-center bg-gray-100 rounded-lg">
+                    <p class="text-gray-500 font-semibold text-sm">Savings Amount</p>
+                    <span class="text-lg font-bold text-gray-800" id="mySave"></span>$
+                </div>
+                
+                <div class="p-4 text-center bg-gray-100 rounded-lg">
+                    <p class="text-gray-500 font-semibold text-sm">Remaining Balance</p>
+                    <span class="text-lg font-bold text-gray-800" id="balanceTk"></span>$
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+</html>
